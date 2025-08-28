@@ -1,2 +1,2 @@
 # Personal-Website
-portfolio website, working with clean layouts, colour , clean trasitions
+portfolio website, working with clean layouts, colours , clean trasitions
