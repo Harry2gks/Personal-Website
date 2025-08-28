@@ -1,0 +1,221 @@
+  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio of a Computer Science student showcasing projects and contact information.">
+<title>Harry Katsaris </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+<nav class="nav" aria-label="Main navigation">
+<a class="logo" href="#home">Harry K.</a>
+<button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</button>
+<ul id="nav-menu" class="nav-menu">
+<li><a href="#about"></>About</a></li>
+<li><a href="#projects"></>Projects</a></li>
+<li><a href="#contact"></>Contact</a></li>
+<li><a style="background: #0a192f;  
+              color: #54d9bd;" 
+       href="cv.pdf" download>Resume</a></li>
+</ul>
+</nav>
+</header>
+
+<main id="home">
+<section class="hero" aria-labelledby="intro-title">
+<div class="container">
+<h1 style="color: #ccd6f6;" id="intro-title"><span style="color: #54d9bd;">Hi,</span> I’m Harry.</h1>
+<h1 style="color: #8892b0;" id="intro-title2">A <span style="color: #ccd6f6;">technology</span> enthusiast.</h1>
+<p class="subtitle">I'm a Computer Science student with a strong passion for web technologies and solving challenging problems.</p>
+<div class="hero-cta">
+<a class="btn primary" href="#projects">View Projects</a>
+<a class="btn ghost" href="#contact">Get in Touch</a>
+</div>
+</div>
+</section>
+
+<section id="about" class="section" aria-labelledby="about-title">
+<div class="container grid two-col">
+<div>
+<h2 id="about-title">About me</h2>
+<p>I’m a Computer Science student focused on front-end and full‑stack fundamentals. By day I take care of the quality of the best coffee the town I am in has and by evening I am coding digital experinces.</p>
+<ul class="details">
+<li><strong>Focus</strong>: Web fundamentals, slawless design, clean code </li>
+<li><strong>Skills</strong>: HTML, CSS, JavaScript, C, Python, Git</li>
+<li><strong>Currently</strong>: Building projects and consuming large quantites of coffee</li>
+</ul>
+</div>
+<div class="about-card">
+<div class="about-stats">
+<div><span class="stat">10+</span><span class="label">Projects</span></div>
+<div><span class="stat">3</span><span class="label">Years coding</span></div>
+<div><span class="stat">100%</span><span class="label">Curiosity</span></div>
+<div><span class="stat">100+</span><span class="label">Problems solved</span></div>
+<div><span class="stat">200</span><span class="label">hrs of lo‑fi</span></div>
+<div><span class="stat">1000+</span><span class="label">Cups of coffee</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="section projects-section" aria-labelledby="projects-title">
+<div class="container">
+<h2 id="projects-title" style="text-align:center;"> Projects</h2>
+<div class="projects-grid">
+    
+<!-- Project 1 -->
+<article class="project-item">
+<div class="project-info">
+<h3 class="project-title">Light/Dark Mode</h3>
+<p class="project-description">Accessible theme toggle with local storage and smooth transitions. Features automatic detection of user's system preference and manual override options.</p>
+<div class="project-tech">
+<span class="tech-tag">JavaScript</span>
+<span class="tech-tag">CSS</span>
+<span class="tech-tag">Local Storage</span>
+</div>
+<div class="card-actions">
+<a class="btn small" href="../Documents/Developer_Space/Projects/light_dark_mode/index.html" target="_blank" rel="noopener" title="Live demo" aria-label="Live demo">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;">
+<path d="M12 3a9 9 0 1 0 .001 18.001A9 9 0 0 0 12 3Zm0 2a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm-1 3h2v5h3v2h-5V8Z"/></svg>
+</a>
+<a class="btn small ghost" href="#" aria-disabled="true" title="View code" aria-label="View code">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;">
+<path d="M8.7 7.3 3.99 12l4.7 4.7 1.41-1.41L6.81 12l3.3-3.29L8.7 7.3Zm6.6 0-1.41 1.41L17.19 12l-3.3 3.29 1.41 1.41L20.01 12l-4.7-4.7Z"/></svg>
+</a>
+</div>
+</div>
+<div class="project-image">
+<img src="https://via.placeholder.com/600x300/54d9bd/ffffff?text=Light+Dark+Mode" alt="Light/Dark Mode Project">
+</div>
+</article>
+
+<!-- Project 2 -->
+<article class="project-item">
+<div class="project-info">
+<h3 class="project-title">Infinite Scroll</h3>
+<p class="project-description">Loads content on demand with intersection observer and graceful UX. Implements efficient lazy loading with smooth animations and error handling.</p>
+<div class="project-tech">
+<span class="tech-tag">JavaScript</span>
+<span class="tech-tag">Intersection Observer</span>
+<span class="tech-tag">API</span>
+</div>
+<div class="card-actions">
+<a class="btn small" href="../Documents/Developer_Space/Projects/infinite_scroll/index.html" target="_blank" rel="noopener" title="Live demo" aria-label="Live demo">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;">
+<path d="M12 3a9 9 0 1 0 .001 18.001A9 9 0 0 0 12 3Zm0 2a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm-1 3h2v5h3v2h-5V8Z"/></svg>
+</a>
+<a class="btn small ghost" href="#" aria-disabled="true" title="View code" aria-label="View code">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;">
+<path d="M8.7 7.3 3.99 12l4.7 4.7 1.41-1.41L6.81 12l3.3-3.29L8.7 7.3Zm6.6 0-1.41 1.41L17.19 12l-3.3 3.29 1.41 1.41L20.01 12l-4.7-4.7Z"/></svg>
+</a>
+</div>
+</div>
+<div class="project-image">
+<img src="https://via.placeholder.com/600x300/8892b0/ffffff?text=Infinite+Scroll" alt="Infinite Scroll Project">
+</div>
+</article>
+
+<!-- Project 3 -->
+<article class="project-item">
+<div class="project-info">
+<h3 class="project-title">Pokedex</h3>
+<p class="project-description">Vanilla JS app consuming a public API with clean UI. Features search functionality, detailed Pokemon information, and responsive design.</p>
+<div class="project-tech">
+<span class="tech-tag">JavaScript</span>
+<span class="tech-tag">API</span>
+<span class="tech-tag">CSS</span>
+</div>
+<div class="card-actions">
+<a class="btn small" href="../Documents/Developer_Space/Projects/React-pokedex/index.html" target="_blank" rel="noopener" title="Live demo" aria-label="Live demo">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;">
+<path d="M12 3a9 9 0 1 0 .001 18.001A9 9 0 0 0 12 3Zm0 2a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm-1 3h2v5h3v2h-5V8Z"/></svg>
+</a>
+<a class="btn small ghost" href="#" aria-disabled="true" title="View code" aria-label="View code">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;">
+<path d="M8.7 7.3 3.99 12l4.7 4.7 1.41-1.41L6.81 12l3.3-3.29L8.7 7.3Zm6.6 0-1.41 1.41L17.19 12l-3.3 3.29 1.41 1.41L20.01 12l-4.7-4.7Z"/></svg>
+</a>
+</div>
+</div>
+<div class="project-image">
+<img src="https://via.placeholder.com/600x300/ccd6f6/0a192f?text=Pokedex" alt="Pokedex Project">
+</div>
+</article>
+
+<!-- Project 4 -->
+<article class="project-item">
+<div class="project-info">
+<h3 class="project-title">ReactTodo List</h3>
+<p class="project-description">Simple and clean task manager demonstrating DOM and state patterns. Features CRUD operations, local storage, and modern React hooks.</p>
+<div class="project-tech">
+<span class="tech-tag">React</span>
+<span class="tech-tag">JavaScript</span>
+<span class="tech-tag">Local Storage</span>
+</div>
+<div class="card-actions">
+<a class="btn small" href="https://react-todo-list-v2-lemon.vercel.app/" target="_blank" rel="noopener" title="Live demo" aria-label="Live demo">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;">
+<path d="M12 3a9 9 0 1 0 .001 18.001A9 9 0 0 0 12 3Zm0 2a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm-1 3h2v5h3v2h-5V8Z"/></svg>
+</a>
+<a class="btn small ghost" href="https://github.com/Harry2gks/react-todo-list-v2" aria-disabled="true" target="_blank" title="View code" aria-label="View code">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;">
+<path d="M8.7 7.3 3.99 12l4.7 4.7 1.41-1.41L6.81 12l3.3-3.29L8.7 7.3Zm6.6 0-1.41 1.41L17.19 12l-3.3 3.29 1.41 1.41L20.01 12l-4.7-4.7Z"/></svg>
+</a>
+</div>
+</div>
+<div class="project-image">
+<img src="https://via.placeholder.com/600x300/54d9bd/ffffff?text=React+Todo" alt="React Todo Project">
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section" aria-labelledby="contact-title">
+<div class="container">
+<h2 id="contact-title">Get In Touch</h2>
+<p>I always keep an eye open for new opportunities and interesting projects.</p>
+<div class="contact-actions">
+<a class="btn primary" href="mailto:your.email@example.com?subject=Opportunity%20from%20your%20portfolio">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;margin-right:6px;"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 12 4 6.01V6h16ZM4 18V8.24l8 5.76 8-5.76V18H4Z"/></svg>
+Email me</a>
+<div class="socials" aria-label="Social links">
+<a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.48 0-.23-.01-.99-.01-1.79-2.78.62-3.37-1.2-3.37-1.2-.46-1.19-1.12-1.51-1.12-1.51-.92-.64.07-.63.07-.63 1.02.07 1.56 1.07 1.56 1.07.9 1.58 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 2.5-.34c.85 0 1.71.12 2.5.34 1.9-1.32 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.06.36.32.68.95.68 1.92 0 1.38-.01 2.49-.01 2.83 0 .26.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+</a>
+<a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 21.5H3.56V9h3.38v12.5ZM5.25 7.53a2 2 0 1 1 0-4 2 2 0 0 1 0 4ZM21.5 21.5h-3.37v-6.5c0-1.55-.03-3.54-2.16-3.54-2.16 0-2.49 1.68-2.49 3.43v6.61h-3.37V9h3.23v1.71h.05c.45-.85 1.56-1.74 3.21-1.74 3.44 0 4.07 2.27 4.07 5.22v7.31Z"/></svg>
+</a>
+<a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 .001 6.999A3.5 3.5 0 0 0 12 9.5Zm5.25-.75a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>
+</a>
+<a href="https://app.thestorygraph.com/profile/yourusername" target="_blank" rel="noopener" aria-label="StoryGraph" title="StoryGraph">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h6a3 3 0 0 1 3 3v15.5l-3-2-3 2V6a1 1 0 0 0-1-1H4V3Zm10 0h6v2h-3a1 1 0 0 0-1 1v15.5l-3-2-3 2V6a3 3 0 0 1 3-3Z"/></svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<span>© <span id="year"></span> Harry Katsaris</span>
+<a class="back-to-top" href="#home">Back to top</a>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
