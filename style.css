@@ -14,9 +14,10 @@
   --color-background: #0a192f; 
    --color-text: #8892b0; 
    --color-accent: #54d9bd; 
+   /*--color-accent: #f6d6cc */
    --color-soft: #111b36;
    --color-header: #ccd6f6; 
-
+   --color-white: #ffffff;
    
 
   --shadow-sm: 0 2px 6px rgba(0,0,0,0.06);
@@ -64,7 +65,7 @@ img { max-width: 100%; display: block; }
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
   height: var(--header-height);
   padding: 0 4vw;
@@ -93,22 +94,52 @@ img { max-width: 100%; display: block; }
   transform: translateY(-1px);
 }
 
+/* Make logo in nav menu look consistent with other nav items */
+.nav-menu .logo {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  padding: 0.5rem 0.25rem;
+  border-radius: 8px;
+  transition: transform 160ms ease, color 160ms ease;
+}
+
+.nav-menu .logo:hover {
+  color: var(--color-accent);
+  background: transparent;
+  transform: translateY(-1px);
+}
+
 .nav-toggle {
   display: none;
   width: 40px;
   height: 40px;
   border: 1px solid var(--color-soft);
-  background: #fff;
+  background: var(--color-soft);
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .nav-toggle .bar {
   display: block;
   width: 18px;
   height: 2px;
   background: var(--color-text);
-  margin: 3px 0;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.nav-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Hero */
@@ -138,7 +169,7 @@ img { max-width: 100%; display: block; }
 }
 .about-card {
   background: var(--color-soft);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--color-header);
   border-radius: var(--radius);
   padding: 1.25rem;
 }
@@ -164,7 +195,6 @@ img { max-width: 100%; display: block; }
   position: relative;
   display: inline-block;
   margin-bottom: 2rem;
-  cursor: pointer;
 }
 .section h2::after {
   content: '';
@@ -258,13 +288,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.85rem;
   font-weight: 500;
 }
-.card {
-  border: 2px solid #e5e7eb;
-  border-radius: var(--radius);
-  background: #FFF5EE; 
-  box-shadow: var(--shadow-sm);
-  transition: transform 160ms ease, box-shadow 160ms ease;
-}
+
 .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--color-accent); }
 .card-body { padding: 1.1rem; }
 .card-title { margin: 0 0 0.35rem; font-size: 1.2rem; }
@@ -288,20 +312,52 @@ img { max-width: 100%; display: block; }
 .btn.primary {
   background: var(--color-background);
   border-color: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-white);
 }
 .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
 .btn:active { transform: translateY(0); box-shadow: var(--shadow-sm); }
 .btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .btn.ghost {
   background: transparent;
-  border-color: #e5e7eb;
+  border-color: var(--color-header);
 }
 .btn.small { padding: 0.45rem 0.7rem; font-size: 0.9rem; }
 
 /* Contact */
 /* Contact actions */
 .contact-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+
+/* Copy email button tooltip */
+.copy-email {
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+
+.copy-email::after {
+  content: attr(title);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-text);
+  color: var(--color-background);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+  margin-top: 8px;
+}
+
+.copy-email:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(4px);
+}
+
 .socials { display: flex; gap: 0.5rem; }
 .socials a {
   width: 40px; height: 40px;
@@ -331,6 +387,11 @@ img { max-width: 100%; display: block; }
   .project-info {
     margin-right: 0;
     order: 2;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2rem;
+    z-index: 3;
   }
   .project-image {
     order: 1;
