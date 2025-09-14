@@ -1,11 +1,31 @@
- 
 // Mobile nav toggle
 const navToggleButton = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('#nav-menu');
 if (navToggleButton && navMenu) {
   navToggleButton.addEventListener('click', () => {
     const isOpen = navMenu.classList.toggle('open');
+    navToggleButton.classList.toggle('open', isOpen);
     navToggleButton.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('open') && 
+        !navMenu.contains(e.target) && 
+        !navToggleButton.contains(e.target)) {
+      navMenu.classList.remove('open');
+      navToggleButton.classList.remove('open');
+      navToggleButton.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close menu when scrolling
+  window.addEventListener('scroll', () => {
+    if (navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      navToggleButton.classList.remove('open');
+      navToggleButton.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
@@ -53,3 +73,36 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // Current year in footer
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+// Copy email to clipboard functionality
+const copyEmailButton = document.querySelector('.copy-email');
+if (copyEmailButton) {
+  copyEmailButton.addEventListener('click', async () => {
+    const email = copyEmailButton.getAttribute('data-email');
+    try {
+      await navigator.clipboard.writeText(email);
+      const originalTitle = copyEmailButton.getAttribute('title');
+      copyEmailButton.setAttribute('title', 'Copied!');
+      
+      // Reset tooltip text after 2 seconds
+      setTimeout(() => {
+        copyEmailButton.setAttribute('title', originalTitle);
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy email: ', err);
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      
+      const originalTitle = copyEmailButton.getAttribute('title');
+      copyEmailButton.setAttribute('title', 'Copied!');
+      setTimeout(() => {
+        copyEmailButton.setAttribute('title', originalTitle);
+      }, 2000);
+    }
+  });
+}
